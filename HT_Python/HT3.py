@@ -13,7 +13,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 def run(playwright: Playwright) -> None:
     browser = playwright.webkit.launch(headless=False)
     #.Use Playwright Codegen to emulate Devices iPhone 13
-    context = browser.new_context(**playwright.devices["Pixel 5"])
+    context = browser.new_context(**playwright.devices["Pixel 5"],color_scheme= 'dark')
     #context = browser.new_context(**playwright.devices["iPhone 13"])
 
     #print(playwright.devices["iPhone 13"])
